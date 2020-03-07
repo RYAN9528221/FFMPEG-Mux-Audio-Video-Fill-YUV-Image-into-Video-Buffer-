@@ -3,8 +3,12 @@ Using FFMPEG transcode a bmp image that was get from OpenCV and convert it from 
 
 YUV420P:
 The concept of FFMPEG is insert R'G'B to pict->data[0],pict->data[1] and pict->data[0] CR.
-		//Y Color
-		int index;
+		
+                
+                
+            
+                //Y Color
+                int index;
 		for (int row = 0; row < pict->height; row++)
 		{
 			for (int col = 0; col < pict->width; col++) 
@@ -12,7 +16,6 @@ The concept of FFMPEG is insert R'G'B to pict->data[0],pict->data[1] and pict->d
 				double R = (*(pData + row * stepWidth  + col * nChannels  + 2));
 				double G = (*(pData + row * stepWidth  + col * nChannels  + 1));
 				double B = (*(pData + row * stepWidth  + col * nChannels ));
-			
 				pict->data[0][row * pict->linesize[0] + col] = 0.257 * R + 0.504 * G + 0.098 * B + 16;
 			}
 		}
