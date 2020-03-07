@@ -1,8 +1,9 @@
 # WenPingYu
 Using FFMPEG transcode a bmp image that was get from OpenCV and convert it from RGB format to YCbCr 
 
+YUV420P:
 The concept of FFMPEG is insert R'G'B to pict->data[0],pict->data[1] and pict->data[0] CR.
-/* Y */
+		//Y Color
 		int index;
 		for (int row = 0; row < pict->height; row++)
 		{
