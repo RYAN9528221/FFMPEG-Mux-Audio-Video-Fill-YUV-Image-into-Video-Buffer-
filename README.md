@@ -7,7 +7,9 @@ The concept of FFMPEG is insert R'G'B to pict->data[0],pict->data[1] and pict->d
                 
                 
             
-                //Y Color
+                
+		
+		//Y Color
                 int index;
 		for (int row = 0; row < pict->height; row++)
 		{
